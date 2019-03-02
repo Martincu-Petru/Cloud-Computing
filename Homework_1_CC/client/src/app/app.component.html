@@ -1,0 +1,38 @@
+<mat-card class="example-card">
+  <div *ngIf="track; then showCard else showWait"></div>
+    <ng-template #showCard>
+      <mat-card-header>
+        <div mat-card-avatar><img src="{{track.artist_portrait_link}}" class="header-image"></div>
+          <mat-card-title>{{track.track_writer}}</mat-card-title>
+          <mat-card-subtitle>{{track.album_name}}</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src={{track.album_cover_link}} class="cover-image">
+        <mat-card-content>
+          <p>
+            {{track.track_title}}
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button (click)="getTracks()" mat-flat-button color="primary">Get new track</button>
+          <a href="{{track.spotify_link}}"><button style="margin-left: 10px" mat-flat-button color="primary">View on Spotify</button></a>
+        </mat-card-actions>
+      </ng-template>
+    <ng-template #showWait>
+        <mat-card-header>
+            <div mat-card-avatar><img src="https://novigenix.com/wp-content/uploads/2015/12/picto-bleu-sablier-361px.png" class="header-image"></div>
+              <mat-card-title>Please</mat-card-title>
+              <mat-card-subtitle>wait</mat-card-subtitle>
+            </mat-card-header>
+            <img mat-card-image src="http://www.festival56.com/images/loading.gif" class="cover-image">
+            <mat-card-content>
+              <p>
+                We are processing your request...
+              </p>
+            </mat-card-content>
+            <mat-card-actions>
+              <button (click)="getTracks()" mat-flat-button color="primary">Get new track</button>
+              <button style="margin-left: 10px" mat-flat-button color="primary">View on Spotify</button>
+            </mat-card-actions>
+    </ng-template>
+</mat-card>
+

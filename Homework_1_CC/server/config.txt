@@ -1,0 +1,4 @@
+{
+    "spotify-authorization": "Basic NDAxNzc1NTM5OGUyNGMxMDkyZTRmNmYwZjMyZDQxODE6MzI1NmUxNDUwZWQ2NDc5MThkZDU2NWRhNjU3ZWM4N2Q=",
+    "new-york-times-apiKEY": "9jCwaeQQZlSvTenmAYjeTbf04xpWHJv4"
+}

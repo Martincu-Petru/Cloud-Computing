@@ -1,0 +1,236 @@
+Date and time: Fri Mar  1 09:26:58 2019
+
+Latency: 4.119802713394165s
+
+Response: {"track_title": "Mazurkas, Op. 56: No. 2 in C Major", "artist_portrait_link": "https://i.scdn.co/image/ac2c86445b627d763321720cc14d90b3fa69e993", "track_writer": "Fr\u00e9d\u00e9ric Chopin", "album_cover_link": "https://i.scdn.co/image/2505df17501063ccf82bd5cccee7a8032c50016d", "album_name": "The Other Side of Chopin", "spotify_link": "https://open.spotify.com/artist/7y97mc3bZRFXzT2szRM4L4"}
+
+GET / HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+Accept: application/json, text/plain, */*
+Origin: http://localhost:4200
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36
+DNT: 1
+Referer: http://localhost:4200/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+
+----------------------------------------------------------------------
+
+Date and time: Fri Mar  1 09:28:43 2019
+
+Latency: 4.6918909549713135s
+
+Response: {"track_title": "Gemini (feat. Jonny Craig)", "artist_portrait_link": "https://i.scdn.co/image/f313ea5243e792e444c6f5d47b3970f95645dd25", "track_writer": "Whether, I", "album_cover_link": "https://i.scdn.co/image/87c7ea9dca5618e45981fb0b87efeb7386e3ad26", "album_name": "Catalyst", "spotify_link": "https://open.spotify.com/artist/4Aj0O9rKeafoD0ud4kS8eH"}
+
+GET / HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+Accept: application/json, text/plain, */*
+Origin: http://localhost:4200
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36
+DNT: 1
+Referer: http://localhost:4200/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+
+----------------------------------------------------------------------
+
+Date and time: Fri Mar  1 09:29:02 2019
+
+Latency: 4.278096914291382s
+
+Response: {"track_title": "No Good", "artist_portrait_link": "https://i.scdn.co/image/0d7bd4fd618e133e328f47f3f32ca2bd08aedc85", "track_writer": "KALEO", "album_cover_link": "https://i.scdn.co/image/0af863cb3757c429eb7bd0fb820124d881c636a6", "album_name": "No Good", "spotify_link": "https://open.spotify.com/artist/7jdFEYD2LTYjfwxOdlVjmc"}
+
+GET / HTTP/1.1
+Accept-Encoding: identity
+Host: 127.0.0.1:8080
+User-Agent: Python-urllib/3.7
+Connection: close
+
+----------------------------------------------------------------------
+
+Date and time: Fri Mar  1 09:29:02 2019
+
+Latency: 4.293159246444702s
+
+Response: {"track_title": "Make Them Wheels Roll", "artist_portrait_link": "https://i.scdn.co/image/0b6e2ff80e7e5f2af0db0917d7fc5ae1516ff0aa", "track_writer": "SAFIA", "album_cover_link": "https://i.scdn.co/image/a4fb34cc6c7fd0e05551e34f25b13222e957f557", "album_name": "Internal", "spotify_link": "https://open.spotify.com/artist/1y07gMlsfAdz2KOvZzyUTB"}
+
+GET / HTTP/1.1
+Accept-Encoding: identity
+Host: 127.0.0.1:8080
+User-Agent: Python-urllib/3.7
+Connection: close
+
+----------------------------------------------------------------------
+
+Date and time: Fri Mar  1 09:29:02 2019
+
+Latency: 4.449336528778076s
+
+Response: {"track_title": "Look Back At It", "artist_portrait_link": "https://i.scdn.co/image/77c8648feecf8f8f8a3ec9d6d9df5235df2811ae", "track_writer": "A Boogie Wit da Hoodie", "album_cover_link": "https://i.scdn.co/image/388171ca9cd00260701aa984ba622d3929c6d389", "album_name": "Hoodie SZN", "spotify_link": "https://open.spotify.com/artist/31W5EY0aAly4Qieq6OFu6I"}
+
+GET / HTTP/1.1
+Accept-Encoding: identity
+Host: 127.0.0.1:8080
+User-Agent: Python-urllib/3.7
+Connection: close
+
+----------------------------------------------------------------------
+
+Date and time: Fri Mar  1 09:29:06 2019
+
+Latency: 3.8267664909362793s
+
+Response: {"track_title": "March Madness", "artist_portrait_link": "https://i.scdn.co/image/5cdf2472d3eda9efc1a0b2bb8bc5d38ae2597fae", "track_writer": "Future", "album_cover_link": "https://i.scdn.co/image/b4714732cab11a52755c0dfc37aa0134466bdc59", "album_name": "March Madness", "spotify_link": "https://open.spotify.com/artist/1RyvyyTE3xzB2ZywiAwp0i"}
+
+GET / HTTP/1.1
+Accept-Encoding: identity
+Host: 127.0.0.1:8080
+User-Agent: Python-urllib/3.7
+Connection: close
+
+----------------------------------------------------------------------
+
+Date and time: Fri Mar  1 09:29:06 2019
+
+Latency: 4.067771673202515s
+
+Response: {"track_title": "2019", "artist_portrait_link": "https://i.scdn.co/image/835b92ae7702b3e130077e05547d8dc7f8a047b2", "track_writer": "Bazanji", "album_cover_link": "https://i.scdn.co/image/0a62d4620035aa2a85e8b1c1e474f09876df61e2", "album_name": "2019", "spotify_link": "https://open.spotify.com/artist/3L8FZaw2Rg1oUw3vB4gUME"}
+
+GET / HTTP/1.1
+Accept-Encoding: identity
+Host: 127.0.0.1:8080
+User-Agent: Python-urllib/3.7
+Connection: close
+
+----------------------------------------------------------------------
+
+Date and time: Fri Mar  1 09:29:06 2019
+
+Latency: 4.037098169326782s
+
+Response: {"track_title": "Sunflower - Spider-Man: Into the Spider-Verse", "artist_portrait_link": "https://i.scdn.co/image/853d77fb4c4834e2b9308027489e60ce6a70dca7", "track_writer": "Various Artists", "album_cover_link": "https://i.scdn.co/image/3aa37254a41cf96e81572524ec523cb870f2bb89", "album_name": "Spider-Man: Into the Spider-Verse (Soundtrack From & Inspired by the Motion Picture)", "spotify_link": "https://open.spotify.com/artist/0LyfQWJT6nXafLPZqxe9Of"}
+
+GET / HTTP/1.1
+Accept-Encoding: identity
+Host: 127.0.0.1:8080
+User-Agent: Python-urllib/3.7
+Connection: close
+
+----------------------------------------------------------------------
+
+Date and time: Fri Mar  1 09:34:45 2019
+
+Latency: 5.549437522888184s
+
+Response: {"track_title": "Since U Been Gone", "artist_portrait_link": "https://i.scdn.co/image/5e225f06cf4f2c02262c0fa4b10886824c9b3890", "track_writer": "Kelly Clarkson", "album_cover_link": "https://i.scdn.co/image/ec5422fbeed9457f0ffc03e4888ef7a49930e222", "album_name": "Breakaway", "spotify_link": "https://open.spotify.com/artist/3BmGtnKgCSGYIUhmivXKWX"}
+
+GET / HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+Accept: application/json, text/plain, */*
+Origin: http://localhost:4200
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36
+DNT: 1
+Referer: http://localhost:4200/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+
+----------------------------------------------------------------------
+
+Date and time: Fri Mar  1 09:34:47 2019
+
+Latency: 5.308398962020874s
+
+Response: {"track_title": "Donald Trump", "artist_portrait_link": "https://i.scdn.co/image/67a39ada83e4dc3e4690e361e9dc91dd702ea2ee", "track_writer": "Mac Miller", "album_cover_link": "https://i.scdn.co/image/e0e65f54b8eda12493bc8b74d6b019cd28d6de95", "album_name": "Best Day Ever (5th Anniversary Remastered Edition)", "spotify_link": "https://open.spotify.com/artist/4LLpKhyESsyAXpc4laK94U"}
+
+GET / HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+Accept: application/json, text/plain, */*
+Origin: http://localhost:4200
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36
+DNT: 1
+Referer: http://localhost:4200/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+
+----------------------------------------------------------------------
+
+Date and time: Fri Mar  1 09:34:54 2019
+
+Latency: 4.795522928237915s
+
+Response: {"track_title": "Now I'm Up To My Neck With Offers", "artist_portrait_link": "https://i.scdn.co/image/3a93cc711c94dc97326798b24fd04007156a7b9b", "track_writer": "$uicideBoy$", "album_cover_link": "https://i.scdn.co/image/4b259003dcfa9442c663dc3979c00726cec41b43", "album_name": "KILL YOURSELF Part XX: The Infinity Saga", "spotify_link": "https://open.spotify.com/artist/1VPmR4DJC1PlOtd0IADAO0"}
+
+GET / HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+Accept: application/json, text/plain, */*
+Origin: http://localhost:4200
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36
+DNT: 1
+Referer: http://localhost:4200/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+
+----------------------------------------------------------------------
+
+Date and time: Fri Mar  1 09:37:55 2019
+
+Latency: 7.671355485916138s
+
+Response: {"track_title": "Dark Energy (feat. Reckless Anxiety & Zerk)", "artist_portrait_link": "https://i.scdn.co/image/5d15a76a679be7f0a33c3ce24f1bb59de74fccba", "track_writer": "The Jokerr", "album_cover_link": "https://i.scdn.co/image/6da34a881862fdfb52d24f35a5b9dc21d7b3f9e5", "album_name": "Collective Chaos: Articles of Transcendence", "spotify_link": "https://open.spotify.com/artist/1V3jYAIMM5gGFc1VayGGUH"}
+
+GET / HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+Accept: application/json, text/plain, */*
+Origin: http://localhost:4200
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36
+DNT: 1
+Referer: http://localhost:4200/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+
+----------------------------------------------------------------------
+
+Date and time: Fri Mar  1 09:37:57 2019
+
+Latency: 7.534198522567749s
+
+Response: {"track_title": "Murder On My Mind", "artist_portrait_link": "https://i.scdn.co/image/74c1d81fcc8db711446eb31e619bab85f6a4b99c", "track_writer": "YNW Melly", "album_cover_link": "https://i.scdn.co/image/b2be804a976693136edae3fbd7e52a0d37791f00", "album_name": "I AM YOU", "spotify_link": "https://open.spotify.com/artist/1cNDP5yjU5vjeR8qMf4grg"}
+
+GET / HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+Accept: application/json, text/plain, */*
+Origin: http://localhost:4200
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36
+DNT: 1
+Referer: http://localhost:4200/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+
+----------------------------------------------------------------------
+
+Date and time: Fri Mar  1 09:38:22 2019
+
+Latency: 4.67339825630188s
+
+Response: {"track_title": "2019", "artist_portrait_link": "https://i.scdn.co/image/835b92ae7702b3e130077e05547d8dc7f8a047b2", "track_writer": "Bazanji", "album_cover_link": "https://i.scdn.co/image/0a62d4620035aa2a85e8b1c1e474f09876df61e2", "album_name": "2019", "spotify_link": "https://open.spotify.com/artist/3L8FZaw2Rg1oUw3vB4gUME"}
+
+GET / HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+Accept: application/json, text/plain, */*
+Origin: http://localhost:4200
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36
+DNT: 1
+Referer: http://localhost:4200/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+
+----------------------------------------------------------------------
+

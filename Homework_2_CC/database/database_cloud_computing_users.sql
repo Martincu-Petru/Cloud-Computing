@@ -1,0 +1,10 @@
+INSERT INTO database_cloud_computing.users (user_id, first_name, last_name, date_of_birth, is_premium) VALUES (1, 'Rakel', 'Bawles', '1993-04-29', 0);
+INSERT INTO database_cloud_computing.users (user_id, first_name, last_name, date_of_birth, is_premium) VALUES (2, 'Lamont', 'Temporal', '1984-10-25', 1);
+INSERT INTO database_cloud_computing.users (user_id, first_name, last_name, date_of_birth, is_premium) VALUES (3, 'Laraine', 'Creser', '1988-01-22', 1);
+INSERT INTO database_cloud_computing.users (user_id, first_name, last_name, date_of_birth, is_premium) VALUES (4, 'Heloise', 'Bowcock', '1978-08-16', 1);
+INSERT INTO database_cloud_computing.users (user_id, first_name, last_name, date_of_birth, is_premium) VALUES (5, 'Merlina', 'Ind', '1986-08-25', 1);
+INSERT INTO database_cloud_computing.users (user_id, first_name, last_name, date_of_birth, is_premium) VALUES (6, 'Brit', 'Goney', '1985-12-06', 0);
+INSERT INTO database_cloud_computing.users (user_id, first_name, last_name, date_of_birth, is_premium) VALUES (7, 'Harald', 'Colnet', '2004-03-02', 1);
+INSERT INTO database_cloud_computing.users (user_id, first_name, last_name, date_of_birth, is_premium) VALUES (8, 'Ruthanne', 'Screwton', '2007-04-22', 0);
+INSERT INTO database_cloud_computing.users (user_id, first_name, last_name, date_of_birth, is_premium) VALUES (9, 'Cornelle', 'Lanon', '1976-03-24', 0);
+INSERT INTO database_cloud_computing.users (user_id, first_name, last_name, date_of_birth, is_premium) VALUES (10, 'Ker', 'Huortic', '1994-05-29', 1);

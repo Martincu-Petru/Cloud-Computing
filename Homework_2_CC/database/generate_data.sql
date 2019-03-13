@@ -40,6 +40,7 @@ create table tracks
     unique (track_id),
   constraint tracks_artists_artist_id_fk
     foreign key (artist_id) references artists (artist_id)
+      on update cascade on delete cascade
 );
 
 alter table tracks
@@ -84,6 +85,7 @@ create table playlist_user
 );
 
 
+
 set foreign_key_checks = 1;
 
 insert into artists (artist_id, artist_name) values (1, 'Alyse Paschke');
@@ -122,6 +124,7 @@ insert into users (user_id, first_name, last_name, date_of_birth, is_premium) va
 insert into users (user_id, first_name, last_name, date_of_birth, is_premium) values (8, 'Ruthanne', 'Screwton', '2007-04-22', false);
 insert into users (user_id, first_name, last_name, date_of_birth, is_premium) values (9, 'Cornelle', 'Lanon', '1976-03-24', false);
 insert into users (user_id, first_name, last_name, date_of_birth, is_premium) values (10, 'Ker', 'Huortic', '1994-05-29', true);
+insert into users (user_id, first_name, last_name, date_of_birth, is_premium) values (11, 'Steven', 'Potter', '1992-12-10', false);
 
 insert into tracks (track_id, track_name, artist_id) values (1, 'Conroy, Erdman and Metz', 12);
 insert into tracks (track_id, track_name, artist_id) values (2, 'Mayer Inc', 17);

@@ -17,8 +17,8 @@ def get_users():
     cursor.execute("SELECT * FROM users")
     results = cursor.fetchall()
 
-    if results is None:
-        return results
+    if len(results) is 0:
+        return None
     else:
         for row in results:
             user_data = {}
@@ -70,8 +70,8 @@ def get_user_playlists(user_id):
                    "WHERE p.user_id = %s", (user_id,))
     results = cursor.fetchall()
 
-    if results is None:
-        return results
+    if len(results) is 0:
+        return None
     else:
         playlists = {"playlists": []}
 
@@ -119,8 +119,8 @@ def get_tracks():
     cursor.execute("SELECT * FROM tracks")
     results = cursor.fetchall()
 
-    if results is None:
-        return results
+    if len(results) is 0:
+        return None
     else:
         for row in results:
             track_data = {}
@@ -146,14 +146,45 @@ def get_track(track_id):
 
     if result is None:
         return result
+    else:
+        track_data = {
+            "track_id": result[0],
+            "track_name": result[1],
+            "artist_id": result[2]
+        }
 
-    track_data = {
-        "track_id": result[0],
-        "track_name": result[1],
-        "artist_id": result[2]
-    }
+        return json.dumps(track_data)
 
-    return json.dumps(track_data)
+
+def get_user_playlist_tracks(playlist_id):
+    cursor = database.cursor()
+    tracks = {"tracks": []}
+
+    cursor.execute("SELECT tracks.track_id, track_name, artist_id "
+                   "FROM playlist_tracks "
+                   "JOIN tracks ON playlist_tracks.track_id = tracks.track_id "
+                   "WHERE playlist_id = %s",
+                   (playlist_id, ))
+
+    results = cursor.fetchall()
+
+    if len(results) is 0:
+        return None
+    else:
+        for row in results:
+            track_data = {}
+
+            track_id = row[0]
+            track_name = row[1]
+            artist_id = row[2]
+
+            track_data["track_id"] = track_id
+            track_data["track_name"] = track_name
+            track_data["artist_id"] = artist_id
+
+            tracks["tracks"].append(track_data)
+
+        return json.dumps(tracks)
 
 
 def get_artists():
@@ -163,8 +194,8 @@ def get_artists():
     cursor.execute("SELECT * FROM artists")
     results = cursor.fetchall()
 
-    if results is None:
-        return results
+    if len(results) is 0:
+        return None
     else:
         for row in results:
             artist_data = {}
@@ -196,5 +227,209 @@ def get_artist(artist_id):
 
     return json.dumps(artist_data)
 
-def delete_users(user_id):
+
+def delete_user(user_id):
     cursor = database.cursor()
+
+    if get_user(user_id) is None:
+        return False
+    else:
+        cursor.execute("DELETE FROM users WHERE user_id = %s", (user_id, ))
+        database.commit()
+
+        return True
+
+
+def delete_users():
+    cursor = database.cursor()
+
+    if get_users() is None:
+        return False
+    else:
+        cursor.execute("DELETE FROM users")
+        database.commit()
+
+        return True
+
+
+def delete_artist(artist_id):
+    cursor = database.cursor()
+
+    if get_artist(artist_id) is None:
+        return False
+    else:
+        cursor.execute("DELETE FROM artists WHERE artist_id = %s", (artist_id, ))
+        database.commit()
+
+        return True
+
+
+def delete_artists():
+    cursor = database.cursor()
+
+    if get_artists() is None:
+        return False
+    else:
+        cursor.execute("DELETE FROM artists")
+        database.commit()
+
+        return True
+
+
+def delete_track(track_id):
+    cursor = database.cursor()
+
+    if get_track(track_id) is None:
+        return False
+    else:
+        cursor.execute("DELETE FROM tracks WHERE track_id = %s", (track_id, ))
+        database.commit()
+
+        return True
+
+
+def delete_tracks():
+    cursor = database.cursor()
+
+    if get_tracks() is None:
+        return False
+    else:
+        cursor.execute("DELETE FROM tracks")
+        database.commit()
+
+        return True
+
+
+def insert_users(users):
+    cursor = database.cursor()
+
+    for user in users["users"]:
+        user_id = int(user["user_id"])
+        first_name = user["first_name"]
+        last_name = user["last_name"]
+        date_of_birth = user["date_of_birth"]
+        is_premium = int(bool(user["is_premium"]))
+
+        if get_user(user_id) is not None:
+            return False
+
+        cursor.execute("INSERT INTO users (user_id, first_name, last_name, date_of_birth, is_premium) "
+                       "VALUES (%s, %s, %s, %s, %s)",
+                       (user_id, first_name, last_name, date_of_birth, is_premium))
+
+    database.commit()
+
+    return True
+
+
+def insert_users_overwrite(users):
+    cursor = database.cursor()
+
+    for user in users["users"]:
+        user_id = int(user["user_id"])
+        first_name = user["first_name"]
+        last_name = user["last_name"]
+        date_of_birth = user["date_of_birth"]
+        is_premium = int(bool(user["is_premium"]))
+
+        if get_user(user_id) is not None:
+            delete_user(user_id)
+
+        cursor.execute("INSERT INTO users (user_id, first_name, last_name, date_of_birth, is_premium) "
+                       "VALUES (%s, %s, %s, %s, %s)",
+                       (user_id, first_name, last_name, date_of_birth, is_premium))
+
+    database.commit()
+
+    return True
+
+
+def insert_artists(artists):
+    cursor = database.cursor()
+
+    for artist in artists["artists"]:
+        artist_id = int(artist["artist_id"])
+        artist_name = artist["artist_name"]
+
+        if get_artist(artist_id) is not None:
+            return False
+
+        cursor.execute("INSERT INTO artists (artist_id, artist_name) "
+                       "VALUES (%s, %s)",
+                       (artist_id, artist_name))
+
+    database.commit()
+
+    return True
+
+
+def insert_tracks(tracks):
+    cursor = database.cursor()
+
+    for track in tracks["tracks"]:
+        track_id = int(track["track_id"])
+        track_name = track["track_name"]
+        artist_id = int(track["artist_id"])
+
+        if get_artist(artist_id) is None:
+            return False
+
+        if get_track(track_id) is not None:
+            return False
+
+        cursor.execute("INSERT INTO tracks (track_id, track_name, artist_id) "
+                       "VALUES (%s, %s, %s)",
+                       (track_id, track_name, artist_id))
+
+    database.commit()
+
+    return True
+
+
+def insert_tracks_overwrite(tracks):
+    cursor = database.cursor()
+
+    for track in tracks["tracks"]:
+        track_id = int(track["track_id"])
+        track_name = track["track_name"]
+        artist_id = int(track["artist_id"])
+
+        if get_artist(artist_id) is None:
+            return False
+
+        if get_track(track_id) is not None:
+            delete_track(track_id)
+
+        cursor.execute("INSERT INTO tracks (track_id, track_name, artist_id) "
+                       "VALUES (%s, %s, %s)",
+                       (track_id, track_name, artist_id))
+
+    database.commit()
+
+    return True
+
+
+def insert_tracks_user_playlist(tracks, playlist_id):
+    cursor = database.cursor()
+
+    for track in tracks["tracks"]:
+        track_id = int(track["track_id"])
+        track_name = track["track_name"]
+        artist_id = int(track["artist_id"])
+
+        if get_artist(artist_id) is None:
+            return False
+        if get_track(track_id) is not None:
+            return False
+
+        cursor.execute("INSERT INTO tracks (track_id, track_name, artist_id) "
+                       "VALUES (%s, %s, %s)",
+                       (track_id, track_name, artist_id))
+
+        cursor.execute("INSERT INTO playlist_tracks (playlist_id, track_id) "
+                       "VALUES (%s, %s)",
+                       (playlist_id, track_id))
+
+    database.commit()
+
+    return True

@@ -1,0 +1,1537 @@
+{
+	"info": {
+		"_postman_id": "88e61251-9626-4c80-b551-19ea4845187b",
+		"name": "Homework_2_CC",
+		"description": "These requests will be used to test the REST API designed for homework 2, Cloud Computing.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET all users - valid request",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8080/users",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET all users - invalid request: invalid Accept header",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8080/users",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET one user - valid request",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8080/users/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET one user - invalid request: invalid Accept header",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8080/users/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET one user - invalid request: invalid user id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8080/users/10000",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"10000"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET user playlists - valid request",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8080/users/1/playlists",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"1",
+						"playlists"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET user playlists - valid request: no playlists",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8080/users/11/playlists",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"11",
+						"playlists"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET user playlists - invalid request: invalid user id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8080/users/12/playlists",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"12",
+						"playlists"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET user playlist - valid request",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8080/users/1/playlists/29",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"1",
+						"playlists",
+						"29"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET user playlist - invalid request: invalid user id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8080/users/12/playlists/29",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"12",
+						"playlists",
+						"29"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET user playlist - invalid request: invalid playlist id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8080/users/1/playlists/30",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"1",
+						"playlists",
+						"30"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET user playlist tracks - valid request",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8080/users/1/playlists/35/tracks",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"1",
+						"playlists",
+						"35",
+						"tracks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET user playlist tracks - valid request Copy",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8080/users/1/playlists/35/tracks",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"1",
+						"playlists",
+						"35",
+						"tracks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET user playlist tracks - invalid request: invalid playlist id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8080/users/1/playlists/99/tracks",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"1",
+						"playlists",
+						"99",
+						"tracks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET tracks - valid request",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8080/tracks",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tracks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET tracks - invalid request: invalid Accept header",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8080/tracks",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tracks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET track - valid request",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8080/tracks/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tracks",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET track - invalid request: invalid track id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8080/tracks/99",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tracks",
+						"99"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET artists - valid request",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8080/artists",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"artists"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET artists - invalid request: invalid Accept header",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8080/artists",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"artists"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET artist - valid request",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8080/artists/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"artists",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET artist - invalid request: invalid Accept header",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8080/artists/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"artists",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET artist - invalid request: invalid artist id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8080/artists/99",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"artists",
+						"99"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST user - valid request",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"users\": [\n        {\n            \"user_id\": 100,\n            \"first_name\": \"Andrew\",\n            \"last_name\": \"Smith\",\n            \"date_of_birth\": \"1990-01-24\",\n            \"is_premium\": \"False\"\n        }\n    ]\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/users",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST user - invalid request: invalid user id",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"users\": [\n        {\n            \"user_id\": 1,\n            \"first_name\": \"Andrew\",\n            \"last_name\": \"Smith\",\n            \"date_of_birth\": \"1990-01-24\",\n            \"is_premium\": \"False\"\n        }\n    ]\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/users",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST user - invalid request: invalid Content-Type header",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"users\": [\n        {\n            \"user_id\": 100,\n            \"first_name\": \"Andrew\",\n            \"last_name\": \"Smith\",\n            \"date_of_birth\": \"1990-01-24\",\n            \"is_premium\": \"False\"\n        }\n    ]\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/users",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST user - invalid request: invalid data in json",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"users\": [\n        {\n            \"user_id\": \"a\",\n            \"first_name\": \"Andrew\",\n            \"last_name\": \"Smith\",\n            \"date_of_birth\": \"1990-01-24\",\n            \"is_premium\": \"False\"\n        }\n    ]\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/users",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST user - invalid request: invalid json format",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"users\": [\n        {\n            \"first_name\": \"Andrew\",\n            \"last_name\": \"Smith\",\n            \"date_of_birth\": \"1990-01-24\",\n            \"is_premium\": \"False\"\n        }\n    ]\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/users",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST track in user playlist - valid request",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"tracks\": [\n        {\n            \"track_id\": 101,\n            \"track_name\": \"Spring is comming\",\n            \"artist_id\": 14\n        }\n    ]\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/users/1/playlists/9",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"1",
+						"playlists",
+						"9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST track in user playlist - invalid request: invalid artist id",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"tracks\": [\n        {\n            \"track_id\": 101,\n            \"track_name\": \"Spring is comming\",\n            \"artist_id\": 1\n        }\n    ]\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/users/1/playlists/9",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"1",
+						"playlists",
+						"9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST track in user playlist - invalid request: invalid track id",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"tracks\": [\n        {\n            \"track_id\": 1,\n            \"track_name\": \"Spring is comming\",\n            \"artist_id\": 1\n        }\n    ]\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/users/1/playlists/9",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"1",
+						"playlists",
+						"9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST track in user playlist - invalid request: invalid json format",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"tracks\": [\n        {\n            \"track_name\": \"Spring is comming\",\n            \"artist_id\": 1\n        }\n    ]\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/users/1/playlists/9",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"1",
+						"playlists",
+						"9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST track in user playlist - invalid request: invalid json data",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"tracks\": [\n        {\n            \"track_id\": \"a\",\n            \"track_name\": \"Spring is comming\",\n            \"artist_id\": 14\n        }\n    ]\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/users/1/playlists/9",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"1",
+						"playlists",
+						"9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST artists - valid request",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"artists\": [\n        {\n            \"artist_id\": 26,\n            \"artist_name\": \"John Smith\"\n        },\n        {\n            \"artist_id\": 27,\n            \"artist_name\": \"Dudley Dursley\"\n        }\n    ]\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/artists",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"artists"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST artists - invalid request: invalid artist id",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"artists\": [\n        {\n            \"artist_id\": 28,\n            \"artist_name\": \"John Smith\"\n        },\n        {\n            \"artist_id\": 28,\n            \"artist_name\": \"Dudley Dursley\"\n        }\n    ]\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/artists",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"artists"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST artists - invalid request: invalid json format",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"artists\": [\n        {\n            \"artist_name\": \"John Smith\"\n        },\n        {\n            \"artist_id\": 27,\n            \"artist_name\": \"Dudley Dursley\"\n        }\n    ]\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/artists",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"artists"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST artists - invalid request: invalid json data",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"artists\": [\n        {\n        \t\"artist_id\": \"a\",\n            \"artist_name\": \"John Smith\"\n        },\n        {\n            \"artist_id\": 27,\n            \"artist_name\": \"Dudley Dursley\"\n        }\n    ]\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/artists",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"artists"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST tracks - valid request",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"tracks\": [\n        {\n            \"track_id\": 102,\n            \"track_name\": \"Winter, Winter\",\n            \"artist_id\": 12\n        },\n        {\n            \"track_id\": 103,\n            \"track_name\": \"Todayc\",\n            \"artist_id\": 17\n        }\n    ]\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/tracks",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tracks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST tracks - invalid request: invalid track id",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"tracks\": [\n        {\n            \"track_id\": 101,\n            \"track_name\": \"Winter, Winter\",\n            \"artist_id\": 12\n        },\n        {\n            \"track_id\": 101,\n            \"track_name\": \"Todayc\",\n            \"artist_id\": 17\n        }\n    ]\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/tracks",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tracks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST tracks - invalid request: invalid json format",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"tracks\": [\n        {\n            \"track_name\": \"Winter, Winter\",\n            \"artist_id\": 12\n        },\n        {\n            \"track_id\": 103,\n            \"track_name\": \"Todayc\",\n            \"artist_id\": 17\n        }\n    ]\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/tracks",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tracks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST tracks - invalid request: invalid json data",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"tracks\": [\n        {\n        \t\"track_id\": \"a\",\n            \"track_name\": \"Winter, Winter\",\n            \"artist_id\": 12\n        },\n        {\n            \"track_id\": 103,\n            \"track_name\": \"Todayc\",\n            \"artist_id\": 17\n        }\n    ]\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/tracks",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tracks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE user - valid request",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8080/users/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE user - invalid request: invalid user id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8080/users/50",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"50"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE users - valid request",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8080/users",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE artist - valid request",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8080/users/11",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"11"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE artist - invalid request: invalid artist id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8080/artists/30",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"artists",
+						"30"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE artists - valid request",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8080/artists",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"artists"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT users - valid request",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"users\": [\n        {\n            \"user_id\": 20,\n            \"first_name\": \"Matthew\",\n            \"last_name\": \"Sommers\",\n            \"date_of_birth\": \"1992-03-21\",\n            \"is_premium\": \"False\"\n        },\n        {\n            \"user_id\": 21,\n            \"first_name\": \"Daniel\",\n            \"last_name\": \"Storm\",\n            \"date_of_birth\": \"1974-02-15\",\n            \"is_premium\": \"True\"\n        }\n    ]\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/users",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT users - invalid request: invalid json format",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"users\": [\n        {\n            \"user_idd\": 20,\n            \"first_name\": \"Matthew\",\n            \"last_name\": \"Sommers\",\n            \"date_of_birth\": \"1992-03-21\",\n            \"is_premium\": \"False\"\n        },\n        {\n            \"user_id\": 21,\n            \"first_name\": \"Daniel\",\n            \"last_name\": \"Storm\",\n            \"date_of_birth\": \"1974-02-15\",\n            \"is_premium\": \"True\"\n        }\n    ]\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/users",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT users - invalid request: invalid json data",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"users\": [\n        {\n            \"first_name\": \"Matthew\",\n            \"last_name\": \"Sommers\",\n            \"date_of_birth\": \"1992-03-21\",\n            \"is_premium\": \"False\"\n        },\n        {\n            \"user_id\": 21,\n            \"first_name\": \"Daniel\",\n            \"last_name\": \"Storm\",\n            \"date_of_birth\": \"1974-02-15\",\n            \"is_premium\": \"True\"\n        }\n    ]\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/users",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT tracks - valid request",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"tracks\": [\n        {\n            \"track_id\": 1,\n            \"track_name\": \"Welcome again\",\n            \"artist_id\": 12\n        },\n        {\n            \"track_id\": 2,\n            \"track_name\": \"See you tomorrow\",\n            \"artist_id\": 17\n        }\n    ]\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/tracks",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tracks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT tracks - invalid request: invalid json format",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"tracks\": [\n        {\n            \"track_name\": \"Welcome again\",\n            \"artist_id\": 12\n        },\n        {\n            \"track_id\": 2,\n            \"track_name\": \"See you tomorrow\",\n            \"artist_id\": 17\n        }\n    ]\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/tracks",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tracks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT tracks - invalid request: invalid json data",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"tracks\": [\n        {\n        \t\"track_id\": \"a\",\n            \"track_name\": \"Welcome again\",\n            \"artist_id\": 12\n        },\n        {\n            \"track_id\": 2,\n            \"track_name\": \"See you tomorrow\",\n            \"artist_id\": 17\n        }\n    ]\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/tracks",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tracks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8080",
+					"host": [
+						"localhost"
+					],
+					"port": "8080"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST a list of users",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		}
+	]
+}

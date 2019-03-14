@@ -178,7 +178,9 @@ class ServerRequestHandler(BaseHTTPRequestHandler):
                     database_response = Database.insert_users(json.loads(users))
 
                     if database_response is True:
-                        self.send_error(204)
+                        self.send_response(201)
+                        self.end_headers()
+                        self.wfile.write(b"")
                     else:
                         self.send_error(409, Strings.message_409, Strings.message_explanation_409)
 
@@ -204,7 +206,9 @@ class ServerRequestHandler(BaseHTTPRequestHandler):
                         database_response = Database.insert_tracks_user_playlist(json.loads(data), playlist_id)
 
                         if database_response is True:
-                            self.send_error(204)
+                            self.send_response(201)
+                            self.end_headers()
+                            self.wfile.write(b"")
                         else:
                             self.send_error(409, Strings.message_409, Strings.message_explanation_409)
 
@@ -222,7 +226,9 @@ class ServerRequestHandler(BaseHTTPRequestHandler):
                     database_response = Database.insert_artists(json.loads(artists))
 
                     if database_response is True:
-                        self.send_error(204)
+                        self.send_response(201)
+                        self.end_headers()
+                        self.wfile.write(b"")
                     else:
                         self.send_error(409, Strings.message_409, Strings.message_explanation_409)
 
@@ -240,7 +246,9 @@ class ServerRequestHandler(BaseHTTPRequestHandler):
                     database_response = Database.insert_tracks(json.loads(tracks))
 
                     if database_response is True:
-                        self.send_error(204)
+                        self.send_response(201)
+                        self.end_headers()
+                        self.wfile.write(b"")
                     else:
                         self.send_error(409, Strings.message_409, Strings.message_explanation_409)
 

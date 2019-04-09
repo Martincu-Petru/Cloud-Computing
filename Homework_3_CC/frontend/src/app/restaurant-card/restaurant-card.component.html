@@ -1,0 +1,13 @@
+<mat-card *ngIf="restaurants" class="example-card">
+  <mat-card-header>
+    <mat-card-title>{{current_restaurant_title}}</mat-card-title>
+  </mat-card-header>
+  <img height="300px" width="300px" mat-card-image src="{{current_restaurant_image}}">
+  <mat-card-content>
+    Opinion: {{current_restaurant_opinion}}
+  </mat-card-content>
+  <mat-card-actions>
+    <button (click)="decrease_current_number()" [disabled]="current_restaurant == 0" mat-button>PREVIOUS</button>
+    <button (click)="increase_current_number()" [disabled]="current_restaurant == total_number_of_restaurants - 1" mat-button>NEXT</button>
+  </mat-card-actions>
+</mat-card>

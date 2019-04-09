@@ -1,0 +1,12 @@
+<div class="background-layer"></div>
+<div class="menu-layer"></div>
+<button class="sign-in-button" mat-raised-button (click)="toggleShowLoginDialog()">Sign up</button>
+<button class="login-button" mat-raised-button (click)="toggleShowSignupDialog()">Login</button>
+
+<div *ngIf="showLoginDialog" class="dialog">
+  <app-login-dialog></app-login-dialog>
+</div>
+
+<div *ngIf="showSignupDialog" class="dialog">
+  <app-signup-dialog></app-signup-dialog>
+</div>

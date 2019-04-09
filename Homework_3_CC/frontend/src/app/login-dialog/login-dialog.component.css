@@ -1,0 +1,11 @@
+.login-container {
+  display: flex;
+  flex-direction: column;
+  width: 200%;
+}
+
+.confirm-login-button {
+  margin-top: 20px;
+  width: 50%;
+  align-self: center;
+}

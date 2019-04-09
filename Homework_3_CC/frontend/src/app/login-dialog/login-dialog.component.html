@@ -1,0 +1,12 @@
+<mat-card class="login-container">
+  Login
+  <mat-form-field>
+    <input matInput placeholder="Enter your email" [formControl]="email" required>
+    <mat-error *ngIf="email.invalid">{{getEmailErrorMessage()}}</mat-error>
+  </mat-form-field>
+  <mat-form-field>
+      <input matInput placeholder="Enter your password" [formControl]="password" required>
+      <mat-error *ngIf="password.invalid">{{getPasswordErrorMessage()}}</mat-error>
+  </mat-form-field>
+  <button (click)="login()" [disabled]="password.invalid || email.invalid" mat-raised-button color="warn" class="confirm-login-button">Log in</button>
+</mat-card>

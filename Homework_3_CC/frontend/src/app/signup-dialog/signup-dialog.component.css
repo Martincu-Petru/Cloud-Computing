@@ -1,0 +1,33 @@
+.signup-container {
+  display: flex;
+  flex-direction: column;
+  width: 150%;
+}
+
+.gender-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.gender-container > * {
+  width: 100%;
+}
+
+.gender-container form {
+  margin-bottom: 20px;
+}
+
+.gender-container form > * {
+  margin: 5px 0;
+}
+
+.gender-container .mat-radio-button {
+  margin: 0 12px;
+}
+
+.confirm-signup-button {
+  margin-top: 20px;
+  width: 50%;
+  align-self: center;
+}

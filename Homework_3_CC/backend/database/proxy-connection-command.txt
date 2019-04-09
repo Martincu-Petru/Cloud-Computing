@@ -1,0 +1,1 @@
+./cloud_sql_proxy -instances=server-cloud-computing:us-central1:database-cloud-computing=tcp:3306 -credential_file=D:\Facultate\Facultate_Anul_III_Semestrul_II\CC\Homeworks\Cloud-Computing\Homework_3_CC\backend\database\server-cloud-computing-key.json 
